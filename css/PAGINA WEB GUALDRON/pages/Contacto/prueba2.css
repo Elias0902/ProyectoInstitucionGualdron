@@ -1,0 +1,602 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'arial';
+}
+
+.contenedor-imagen-principal{
+    max-width: 100%;
+    height: 700px;
+    background: #061186;
+    /* fallback for old browsers */
+    background:-webkit-linear-gradient(to right, hsla(232, 95%, 50%, 0.459), hsla(230, 45%, 52%, 0.664)), url(img/8888.jpeg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background:linear-gradient(to right, hsla(232, 95%, 50%, 0.459), hsla(253, 45%, 52%, 0.664)), url(img/8888.jpeg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment:fixed;
+    position:relative;
+}
+
+
+.titulo-principal{
+    text-align: center;
+    padding-top: 280px;
+    font-size: 50px;
+    color: #fff;
+}
+
+.subtitulo{
+    text-align: center;
+    font: 30px;
+    color: #fff;
+}
+
+
+.contenedor {
+    padding: 60px 0px;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo {
+    color: #0a0686;
+    font-size: 30px;
+    text-align: center;
+  padding: 40px;
+}
+
+h2.titulo-2 {
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+/* Header nuevo*/
+
+header {
+    
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px;
+    box-sizing: border-box;
+    height: 15px;
+    transition: 0.5s;
+    z-index: 9999;
+}
+
+
+
+.logo{
+    display: flex;
+    height: 60%;
+}   
+
+.main-menu{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     list-style: none;
+    
+}
+
+
+.menu-item{
+    margin: 0 1rem;
+    font-weight: 600;
+    cursor:pointer;
+    transition: 0.5s;
+    color:#f2f2f2;
+}
+
+ .cta{
+    padding: 10px 24px;
+    border-radius: 30px;
+    background-color: var(--main-color);
+    color:#f2f2f2;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.cta:hover{
+    color: #f2f2f2;
+    background-color:#04548a;
+
+}    
+ menu-item:hover{
+    color: var Ki--main-color
+}
+
+
+/*RESPONSIVE TABLET HEADER*/
+@media (min-width: 500px) and (max-width: 868px) {
+    header{
+        height: 110px;
+        position: fixed;
+        padding: 70px;        
+    } 
+    
+    .logo{
+        width: 70px;
+        padding-left: -400px;
+        display:flex;
+       
+     }
+     img.logo {
+        padding-top: 0px;
+    }
+
+    
+
+    
+     .main-menu{
+        font-size: 18px;
+        padding: 0 10px ;
+     }
+    
+     .menu-item{
+        margin: 0 1rem;
+        font-weight: 600;
+        cursor:pointer;
+        transition: 0.5s;
+        color:#f2f2f2;
+    }     
+
+ }
+
+
+
+
+ @media (min-width: 868px)and (max-width: 1464px){
+  
+
+/*
+    img.logo {
+        width: 70px;
+        padding-top: 40px;
+       
+    }
+*/
+ }
+
+
+
+/*RESPONISIVE MOBILE HEADER*/
+@media screen and (max-width:500px){
+
+header{
+    padding:10px;
+    position: fixed;
+}    
+ .logo{
+    width: 70px;
+    padding-left: -400px;
+    display:flex;
+    padding-top: 10px;
+ }
+ .main-menu{
+    font-size: 12px;
+    margin-top: 40px;
+    padding: 0 10px ;
+ }
+ .cta{
+ 
+}
+ .menu-item{
+    margin: 0 1rem;
+    font-weight: 600;
+    cursor:pointer;
+    transition: 0.5s;
+    color:#f2f2f2;
+
+}
+}  
+
+
+nav{
+    text-align: right;
+    padding: 30px 50px 0 0;
+}
+
+nav > a{
+    color:#fff;
+    font-weight: 300px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+nav > a:hover{
+    text-decoration: underline;
+}
+
+
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1{
+    font-size: 50px;
+    color:#fff;
+}
+
+.textos-header h2{
+    font-size: 30px;
+    font-weight: 300;
+    color:#fff;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.contenedores{
+
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+   
+
+}
+.boton{
+    width: 40vh;
+    height: 80px;
+    margin-bottom: 80px;
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    border-radius: 40px;
+    transition: background-color 0.3s;
+    padding: 25px;
+    font-size: 18px;
+    box-shadow: 40px;
+    text-decoration: none;
+}
+
+.boton:hover {
+    background-color: rgb(51, 104, 211);
+  }
+
+.espacio{ 
+    width: 30px;
+} 
+
+
+.servicio-ind img {
+    width: 20% !important;
+}
+p.pcenter {
+    text-align: center !important;
+}
+/*Formulario*/
+form {
+            border: 2px solid #333;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #0a0686;
+            height: 80px;
+    margin-bottom: 80px;
+    color: #fff;
+    text-align: center;
+    border-radius: 40px;
+    transition: background-color 0.3s;
+    padding: 25px;
+    font-size: 18px;
+    box-shadow: 40px;
+    text-decoration: none;
+        }
+
+        button:hover {
+            background-color: rgb(51, 104, 211);
+        }
+
+/*Cuerpo*/
+main .sobre-nosotros{
+    padding: 30px 0 60px 0;
+}
+.contenedor-sobre-nosotros{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+
+.imagen-about-us{
+    width: 48%;
+    border-radius: 30px;
+}
+
+.sobre-nosotros .contenido-textos{
+    width: 48%;
+    align-self: center;
+}
+
+.contenido-textos h3{
+    margin-bottom: 15px;
+    padding: 0px 0px 30px 15px
+}
+
+.contenido-textos h3 span{
+    background: #0a0686;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    margin-right: 5px;
+}
+
+.contenido-textos p{
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+.about-services{
+    background: #f2f2f2;
+    padding-bottom: 30px;
+}
+
+
+.servicio-cont{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.servicio-ind{
+    width: 28%;
+    text-align: center;
+}
+
+.servicio-ind img{
+    width: 90%;
+}
+
+.servicio-ind h3{
+    margin: 10px 0;
+}
+
+.servicio-ind p{
+    font-weight: 300;
+    text-align: justify;
+}
+
+button {
+    padding: 15px 100px;
+    border-radius: 30px;
+    background: #0a0686;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+ .textocentrado {
+    text-align: center;
+    ;
+}
+
+/* Ancho del espacio */
+/*
+.boton {
+  width: 100px;
+  height: 30px ;
+  display: inline-block;
+  padding: 20px 40px;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: background-color 0.3s;
+}
+
+
+
+.boton:hover {
+  background-color: rgb(51, 104, 211);
+}
+
+
+.espacio {
+    width: 30px; /* Ancho del espacio 
+  }*/
+
+     /* Footer */
+     footer{
+        background: #15191e;
+        padding: 60px 0 30px 0;
+        margin: auto;
+        overflow: hidden;
+    }
+    .menufooter{
+    text-align: left;
+    color: #0a0686;
+}
+.contactofooter {
+    text-align: left;
+    /* margin: 10px; */
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    text-decoration: underline;
+}
+    
+    .contenedor-footer{
+        display: flex;
+        width: 90%;
+        justify-content: space-evenly;
+        margin: auto;
+        padding-bottom: 50px;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .content-foo{
+        text-align: center;
+    }
+    
+    .content-foo h4{
+        color: #fff;
+        border-bottom: 3px solid #061186;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .content-foo p{
+        color: #ccc;
+    }
+    
+    .titulo-final{
+        text-align: center;
+        font-size: 24px;
+        margin: 20px 0 0 0;
+        color: #9e9797;
+    }
+
+    
+@media screen and (max-width:500px){
+    nav{
+        text-align: center;
+        padding: 30px 0 0 0;
+    }
+
+    nav > a{
+        margin-right: 5px;
+    }
+
+    .textos-header h1{
+        font-size: 35px;
+    }
+
+    .textos-header h2{
+        font-size: 20px;
+    }
+
+    /* ABOUT US */
+
+    .imagen-about-us{
+        margin-bottom: 60px;
+        width: 99%;
+    }
+
+    .sobre-nosotros .contenido-textos{
+        width: 95%;
+    }
+
+    /* Galeria */
+
+    .imagen-port{
+        width: 95%;
+    }
+
+    /* Clients */
+
+    .cards .card{
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards .card img{
+        width: 90px;
+        height: 90px;
+    }
+
+    /* Footer */
+
+    .contenedor-footer{
+        flex-direction: column;
+        border: none;
+    }
+
+    .content-foo{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .content-foo h4{
+        border: none;
+    }
+
+    .content-foo p{
+        text-align: center;
+        color: #ccc;
+        border-bottom: 1px solid #f2f2f2;
+        padding-bottom: 20px;
+    }
+
+    .titulo-final{
+        font-size: 20px;
+    }
+    .horariotitulo{
+        text-align: center;
+        padding: 50px;
+
+    }
+    .bloquehorario {
+        background: blue;
+    }
+     }
+
+     @media (max-width: 600px) {
+        .contenedor-sobre-nosotros {
+            flex-direction: column;
+        }
+        
+        .imagen-about-us {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .contenido-textos {
+            width: 100%;
+        }
+        
+        label, input, textarea, button {
+            width: 100%;
+        }
+    }
